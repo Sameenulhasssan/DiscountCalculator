@@ -84,7 +84,7 @@ export default function App() {
         value={originalPrice}
       />
       <TextInput
-        placeholder="Discount"
+        placeholder="Total Discount"
         style={styles.input}
         keyboardType="numeric"
         keyboardAppearance="dark"
@@ -100,15 +100,15 @@ export default function App() {
       />
       <View style={styles.buttonContainer}>
         <View style={styles.button}>
-          <Button title="Clear" color="orange" onPress={clear} />
+          <Button title="Clear" color="red" onPress={clear} />
         </View>
         <View style={styles.button}>
-          <Button title="Save"  color="orange" onPress={addToList} />
+          <Button title="Save"  color="red" onPress={addToList} />
         </View>
       </View>
       <View style={styles.memory}>
         <View style={styles.buttonM}>
-          <Button title="Show Memory" color="orange" onPress={openModal} />
+          <Button title="Show Memory" color="red" onPress={openModal} />
         </View>
       </View>
       <Modal visible={modalShow} animationType="slide">
@@ -116,12 +116,12 @@ export default function App() {
           style={{
             flexDirection: "row",
             justifyContent: "space-around",
-            marginTop: 20,
+            marginTop: 10,
           }}
         >
           <Text style={styles.header}>Saved Calculations</Text>
           <TouchableOpacity style={styles.back} onPress={closeModal}>
-            <Text style={{ textAlign: "center" }}>Back</Text>
+            <Text style={{ textAlign: "center" }}>GO BACK</Text>
           </TouchableOpacity>
         </View>
         <FlatList
@@ -147,19 +147,19 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   input: {
-    width: "80%",
-    borderColor: "black",
-    borderWidth: 1,
-    borderRadius: 10,
-    padding: 10,
+    width: "100%",
+    borderColor: "red",
+    borderWidth: 3,
+    borderRadius: 50,
+    padding: 25,
     marginBottom: 10,
   },
   input2: {
-    width: "80%",
-    fontSize: 20,
-    borderRadius: 10,
-    borderColor: "black",
-    borderWidth: 1,
+    width: "100%",
+    fontSize: 30,
+    borderRadius: 50,
+    borderColor: "red",
+    borderWidth: 8,
     color: "black",
     padding: 10,
     marginBottom: 10,
@@ -168,30 +168,32 @@ const styles = StyleSheet.create({
   buttonContainer: {
     flexDirection: "row",
     justifyContent: "space-around",
-    width: "70%",
+    width: "100%",
   },
   button: {
-    width: "40%",
+    width: "49.8%",
     borderRadius: 10,
   },
   memory: {
-    marginTop: 20,
-    width: "50%",
+    marginTop: 1,
+    width: "100%",
   },
   header: {
     alignSelf: "center",
-    width: "60%",
+    width: "80%",
     fontSize: 20,
     textAlign: "center",
-    fontWeight: "bold",
-    borderWidth: 2,
-    borderRadius: 10,
+    borderColor: "red",
+    fontWeight: "",
+    borderWidth: 3,
+    borderRadius: 50,
   },
   back: {
-    padding: 8,
+    padding: 6,
     width: 80,
-    borderWidth: 2,
-    borderRadius: 10,
+    borderColor: "red",
+    borderWidth: 3,
+    borderRadius: 50,
   },
   notification:{
     color:'red',
